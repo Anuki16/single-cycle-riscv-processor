@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Sep 16 22:17:38 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : riscv_single_cycle_processor
+Top-level Entity Name : regfile
+Family : Cyclone IV E
+Total logic elements : 2,375
+    Total combinational functions : 1,383
+    Dedicated logic registers : 992
+Total registers : 992
+Total pins : 114
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

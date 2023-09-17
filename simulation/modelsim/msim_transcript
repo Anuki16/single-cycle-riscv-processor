@@ -1,0 +1,106 @@
+# Reading pref.tcl
+# do riscv_single_cycle_processor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/anuki/OneDrive\ -\ University\ of\ Moratuwa/Documents/Anuki/Campus/Semester\ 5/EN3021\ Digital\ System\ Design/riscv_single_cycle_processor {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/regfile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:18:19 on Sep 16,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor" C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 22:18:19 on Sep 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:18:33 on Sep 16,2023
+# vlog -reportprogress 300 -work work C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv 
+# -- Compiling module regfile_tb
+# 
+# Top level modules:
+# 	regfile_tb
+# End time: 22:18:33 on Sep 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:18:36 on Sep 16,2023
+# vlog -reportprogress 300 -work work C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv 
+# -- Compiling module regfile_tb
+# 
+# Top level modules:
+# 	regfile_tb
+# End time: 22:18:36 on Sep 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.regfile_tb
+# vsim work.regfile_tb 
+# Start time: 22:18:44 on Sep 16,2023
+# Loading sv_std.std
+# Loading work.regfile_tb
+# Loading work.regfile
+add wave -position insertpoint  \
+sim:/regfile_tb/read_reg1 \
+sim:/regfile_tb/read_reg2 \
+sim:/regfile_tb/write_reg \
+sim:/regfile_tb/write_data \
+sim:/regfile_tb/write_en \
+sim:/regfile_tb/clk \
+sim:/regfile_tb/rstn \
+sim:/regfile_tb/read_data1 \
+sim:/regfile_tb/read_data2
+run
+# ** Error:          x          x
+#    Time: 56 ns  Scope: regfile_tb File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv Line: 31
+# ** Note: $finish    : C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv(32)
+#    Time: 56 ns  Iteration: 0  Instance: /regfile_tb
+# 1
+# Break in Module regfile_tb at C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv line 32
+add wave -position insertpoint  \
+sim:/regfile_tb/dut/registers
+run
+vlog -reportprogress 300 -work work {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:23:20 on Sep 16,2023
+# vlog -reportprogress 300 -work work C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv 
+# -- Compiling module regfile_tb
+# 
+# Top level modules:
+# 	regfile_tb
+# End time: 22:23:20 on Sep 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.regfile_tb
+run
+# ** Note: $finish    : C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv(32)
+#    Time: 65 ns  Iteration: 1  Instance: /regfile_tb
+# 1
+# Break in Module regfile_tb at C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv line 32
+vlog -reportprogress 300 -work work {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:46 on Sep 16,2023
+# vlog -reportprogress 300 -work work C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv 
+# -- Compiling module regfile_tb
+# 
+# Top level modules:
+# 	regfile_tb
+# End time: 22:27:46 on Sep 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.regfile_tb
+run
+# ** Note: $finish    : C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv(41)
+#    Time: 85 ns  Iteration: 1  Instance: /regfile_tb
+# 1
+# Break in Module regfile_tb at C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv line 41
+# End time: 22:33:36 on Sep 16,2023, Elapsed time: 0:14:52
+# Errors: 0, Warnings: 0
