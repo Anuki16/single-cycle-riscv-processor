@@ -1,0 +1,45 @@
+`include "../controls.sv"
+
+`timescale 1ns/1ps
+
+module immgen_tb();
+
+	logic [31:0] inst;
+	logic [31:0] imm_out;
+	
+	
+	immgen dut(.*);
+	
+	inst = {15'd1238, `TYPE_R};
+	#1 assert (imm_out == 0) else $error("R type: %d", imm_out);
+	#9
+	
+	logic [11:0] number = 12'd1241;
+	
+	inst = {number, 13'b0, `TYPE_I_LOAD};
+	#1 assert (imm_out == number) else $error("I type: %d", imm_out);
+	#9	
+	
+	inst = {number[11:5], 13'b0, number[4:0], `TYPE_S};
+	#1 assert (imm_out == number) else $error("S type: %d", imm_out);
+	#9	
+	
+	logic [12:0] number = 12'd2358;
+	
+	inst = {number[12], number[10:5], 13'b0, number[4:1], number[11], `TYPE_SB};
+	#1 assert (imm_out == number) else $error("SB type: %d", imm_out);
+	#9	
+	
+	logic [31:0] number = 32'd21867371;
+	
+	inst = {number[31:12], `TYPE_U_LUI};
+	#1 assert (imm_out[31:12] == number[31:12]) else $error("U type: %d", imm_out);
+	#9	
+	
+	logic [20:0] number = 20'd831444;
+	
+	inst = {number[20], number[10:1], number[11], number[19:12], 5'b0, `TYPE_Uj};
+	#1 assert (imm_out == number) else $error("UJ type: %d", imm_out);
+	#9	
+	
+endmodule

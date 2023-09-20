@@ -5,10 +5,10 @@ module regfile #(
 	parameter REG_BITS = $clog2(REG_COUNT)
 )(
 	input logic [REG_BITS-1:0] read_reg1, read_reg2, write_reg,
-	input logic [WIDTH-1:0] write_data,
+	input logic signed [WIDTH-1:0] write_data,
 	input logic write_en,
 	input logic clk, rstn,
-	output logic [WIDTH-1:0] read_data1, read_data2
+	output logic signed [WIDTH-1:0] read_data1, read_data2
 );
 	logic [WIDTH-1:0] registers [REG_COUNT-1:0];		// unpacked array of 32 bit packed values
 	

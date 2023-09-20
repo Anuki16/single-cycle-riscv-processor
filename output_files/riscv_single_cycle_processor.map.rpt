@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscv_single_cycle_processor
-Sat Sep 16 22:17:38 2023
+Tue Sep 19 20:21:45 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,14 +13,15 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |regfile
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |datapath
+ 10. Parameter Settings for User Entity Instance: regfile:regfile_obj
+ 11. Parameter Settings for User Entity Instance: alu:alu_obj
+ 12. Port Connectivity Checks: "alu:alu_obj"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,16 +48,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Sep 16 22:17:38 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 19 20:21:45 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; riscv_single_cycle_processor                ;
-; Top-level Entity Name              ; regfile                                     ;
+; Top-level Entity Name              ; datapath                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,375                                       ;
-;     Total combinational functions  ; 1,383                                       ;
-;     Dedicated logic registers      ; 992                                         ;
-; Total registers                    ; 992                                         ;
-; Total pins                         ; 114                                         ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 40                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -69,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+------------------------------+
 ; Option                                                           ; Setting            ; Default Value                ;
 +------------------------------------------------------------------+--------------------+------------------------------+
-; Top-level entity name                                            ; regfile            ; riscv_single_cycle_processor ;
+; Top-level entity name                                            ; datapath           ; riscv_single_cycle_processor ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V                    ;
 ; Use smart compilation                                            ; Off                ; Off                          ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                           ;
@@ -158,55 +159,55 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                            ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/regfile.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                             ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/alu.sv      ;         ;
+; controls.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controls.sv ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/regfile.sv  ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv ;         ;
+; immgen.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/immgen.sv   ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 2,375     ;
-;                                             ;           ;
-; Total combinational functions               ; 1383      ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1298      ;
-;     -- 3 input functions                    ; 85        ;
-;     -- <=2 input functions                  ; 0         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1383      ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 992       ;
-;     -- Dedicated logic registers            ; 992       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 114       ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 992       ;
-; Total fan-out                               ; 9593      ;
-; Average fan-out                             ; 3.69      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 40    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 40    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -214,50 +215,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |regfile                   ; 1383 (1383)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |regfile            ; regfile     ; work         ;
+; |datapath                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 40   ; 0            ; |datapath           ; datapath    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; registers[0][0]                        ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][1]                        ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][2]                        ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][3]                        ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][4]                        ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][5]                        ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][6]                        ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][7]                        ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][8]                        ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][9]                        ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][10]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][11]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][12]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][13]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][14]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][15]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][16]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][17]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][18]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][19]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][20]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][21]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][22]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][23]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][24]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][25]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][26]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][27]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][28]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][29]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][30]                       ; Stuck at GND due to stuck port clock_enable ;
-; registers[0][31]                       ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 32 ;                                             ;
-+----------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -265,54 +225,71 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 992   ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 992   ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 992   ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |regfile|Mux31             ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |regfile|Mux63             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |regfile ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                                 ;
-; REG_COUNT      ; 32    ; Signed Integer                                 ;
-; REG_BITS       ; 5     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |datapath ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; REG_WIDTH      ; 32    ; Signed Integer                                  ;
+; REG_COUNT      ; 32    ; Signed Integer                                  ;
+; ALU_SEL_WIDTH  ; 4     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regfile:regfile_obj ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                          ;
+; REG_COUNT      ; 32    ; Signed Integer                          ;
+; REG_BITS       ; 5     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:alu_obj ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; WIDTH          ; 32    ; Signed Integer                  ;
+; ALU_SEL        ; 4     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu_obj"                                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; zero     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; negative ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 114                         ;
-; cycloneiii_ff         ; 992                         ;
-;     ENA CLR           ; 992                         ;
-; cycloneiii_lcell_comb ; 1383                        ;
-;     normal            ; 1383                        ;
-;         3 data inputs ; 85                          ;
-;         4 data inputs ; 1298                        ;
-;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 4.25                        ;
-+-----------------------+-----------------------------+
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 40                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
 
 
 +-------------------------------+
@@ -320,7 +297,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -330,7 +307,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 16 22:17:26 2023
+    Info: Processing started: Tue Sep 19 20:21:36 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscv_single_cycle_processor -c riscv_single_cycle_processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -345,20 +322,68 @@ Info (12021): Found 1 design units, including 1 entities, in source file regfile
     Info (12023): Found entity 1: regfile File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/regfile.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file simulation/regfile_tb.sv
     Info (12023): Found entity 1: regfile_tb File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/regfile_tb.sv Line: 3
-Info (12127): Elaborating entity "regfile" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
+    Info (12023): Found entity 1: datapath File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file immgen.sv
+    Info (12023): Found entity 1: immgen File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/immgen.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/immgen_tb.sv
+    Info (12023): Found entity 1: immgen_tb File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/immgen_tb.sv Line: 5
+Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:regfile_obj" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 31
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_obj" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 34
+Info (12128): Elaborating entity "immgen" for hierarchy "immgen:immgen_obj" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 39
 Info (144001): Generated suppressed messages file C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/output_files/riscv_single_cycle_processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2489 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 50 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 2375 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4756 megabytes
-    Info: Processing ended: Sat Sep 16 22:17:38 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:25
+Warning (21074): Design contains 40 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 8
+    Warning (15610): No output dependent on input pin "rstn" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 8
+    Warning (15610): No output dependent on input pin "write_en" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 9
+    Warning (15610): No output dependent on input pin "alu_sel[0]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 10
+    Warning (15610): No output dependent on input pin "alu_sel[1]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 10
+    Warning (15610): No output dependent on input pin "alu_sel[2]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 10
+    Warning (15610): No output dependent on input pin "alu_sel[3]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 10
+    Warning (15610): No output dependent on input pin "alu_src_sel" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 11
+    Warning (15610): No output dependent on input pin "instruction[0]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[1]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[2]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[3]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[4]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[5]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[6]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[7]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[8]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[9]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[10]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[11]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[12]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[13]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[14]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[15]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[16]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[17]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[18]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[19]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[20]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[21]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[22]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[23]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[24]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[25]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[26]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[27]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[28]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[29]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[30]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+    Warning (15610): No output dependent on input pin "instruction[31]" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 14
+Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 40 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
+    Info: Peak virtual memory: 4729 megabytes
+    Info: Processing ended: Tue Sep 19 20:21:45 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+

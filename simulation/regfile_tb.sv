@@ -3,11 +3,11 @@
 module regfile_tb();
 	
 	logic [4:0] read_reg1, read_reg2, write_reg;
-	logic [31:0] write_data;
+	logic signed [31:0] write_data;
 	logic write_en;
 	logic clk = 0;
 	logic rstn = 1;
-	logic [31:0] read_data1, read_data2;
+	logic signed [31:0] read_data1, read_data2;
 	
 	regfile dut(.*);
 	
