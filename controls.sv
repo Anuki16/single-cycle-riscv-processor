@@ -26,4 +26,17 @@
 `define TYPE_U_AUIPC 7'b0010111
 `define TYPE_UJ	  7'b1101111
 
+// Load and store types
+`define LS_BYTE	2'b00
+`define LS_HALF	2'b01
+`define LS_WORD	2'b11
+
+// Branch types (0 means no branch)
+`define JMP_JAL	3'b001
+`define JMP_JALR	3'b010
+`define JMP_BEQ	3'b011	
+`define JMP_BNE	3'b100	
+`define JMP_BLT	3'b101	
+`define JMP_BGT	3'b110
+
 `endif

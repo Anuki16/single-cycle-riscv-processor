@@ -2,7 +2,7 @@
 
 module immgen (
 	input logic [31:0] inst,
-	output logic [31:0] imm_out
+	output logic signed [31:0] imm_out
 );
 	logic [6:0] opcode;
 	logic [3:0] func3;

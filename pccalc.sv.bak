@@ -1,0 +1,13 @@
+
+
+module pccalc (
+	input logic [31:0] init_pc,
+	input logic clk, rstn,
+	input logic [31:0] offset,
+	
+	input logic [2:0] branch_type,
+	input logic alu_zero, alu_neg,
+	
+	
+	
+);

@@ -1,0 +1,21 @@
+`include "controls.sv"
+
+`timescale 1ns/1ps
+
+module data_memory_tb();
+	
+	localparam ADDR_WIDTH = 32;
+	localparam DATA_WIDTH = 32;
+	localparam NUM_LOCS;
+	
+	logic [ADDR_WIDTH-1:0] address;
+	logic [DATA_WIDTH-1:0] write_data;
+	logic clk, rstn;
+	logic mem_read, mem_write;	// control signals
+	logic [1:0] load_store_type; 
+	logic load_unsigned;
+	logic [DATA_WIDTH-1:0] read_data;
+	
+	clk = rstn = mem_read = mem_write = 0;
+	
+	always #5 clk <= ~clk;
