@@ -1,0 +1,18 @@
+`include "../controls.sv"
+
+`timescale 1ns/1ps
+
+module pccalc_tb();
+
+	logic clk = 0, rstn = 0;
+	logic [31:0] offset;		
+	logic [31:0] target_pc;
+	logic [2:0] branch_type;
+	logic alu_zero, alu_neg;
+	logic [31:0] return_pc;
+	
+	always #5 clk <= ~clk;
+	
+	pccalc dut (.*);
+	
+	

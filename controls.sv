@@ -39,4 +39,9 @@
 `define JMP_BLT	3'b101	
 `define JMP_BGT	3'b110
 
+// Reg write source select
+`define WR_ALU		2'b00
+`define WR_MEM		2'b01
+`define WR_PC		2'b10
+
 `endif

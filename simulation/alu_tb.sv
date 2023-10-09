@@ -6,7 +6,7 @@ module alu_tb();
 	
 	logic [3:0] alu_sel;
 	logic signed [31:0] bus_a, bus_b, alu_out;
-	logic zero, negative;
+	logic alu_zero, alu_neg;
 	
 	alu dut(.*);
 	

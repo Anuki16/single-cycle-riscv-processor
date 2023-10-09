@@ -7,7 +7,7 @@ module alu #(
 	input logic signed [WIDTH-1:0] bus_a, bus_b,	
 	input logic [ALU_SEL-1:0] alu_sel,
 	output logic signed [WIDTH-1:0] alu_out,
-	output logic zero, negative
+	output logic alu_zero, alu_neg
 );
 	
 	always_comb begin
@@ -22,11 +22,13 @@ module alu #(
 			`ALU_XOR: alu_out = bus_a ^ bus_b;
 			`ALU_SLT: alu_out = bus_a < bus_b;
 			`ALU_SLTU: alu_out = $unsigned(bus_a) < $unsigned(bus_b);
+			`ALU_A:	alu_out = bus_a;
+			`ALU_B:	alu_out = bus_b;
 			default: alu_out = 'b0;
 		endcase
 	end
 	
-	assign zero = (alu_out == 0);
-	assign negative = (alu_out < 0);
+	assign alu_zero = (alu_out == 0);
+	assign alu_neg = (alu_out < 0);
 	
 endmodule
