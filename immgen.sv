@@ -8,11 +8,15 @@ module immgen (
 	logic [3:0] func3;
 	
 	assign opcode = inst[6:0];
+	assign func3 = inst[14:12];
 	
 	always_comb begin
-		if (opcode == `TYPE_I_COMP ||
-			 opcode == `TYPE_I_LOAD ||
-			 opcode == `TYPE_I_JALR)
+		if (opcode == `TYPE_I_COMP && func3 == 3'b101)	// Shift right immediate
+			imm_out = {27'b0, inst[24:20]};
+			
+		else if (opcode == `TYPE_I_COMP ||
+				   opcode == `TYPE_I_LOAD ||
+				   opcode == `TYPE_I_JALR)
 			imm_out = {{20{inst[31]}}, inst[31:20]};
 		
 		else if (opcode == `TYPE_S)

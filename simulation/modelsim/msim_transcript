@@ -10,48 +10,93 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/anuki/OneDrive\ -\ University\ of\ Moratuwa/Documents/Anuki/Campus/Semester\ 5/EN3021\ Digital\ System\ Design/riscv_single_cycle_processor {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controls.sv}
+# vlog -sv -work work +incdir+C:/Users/anuki/OneDrive\ -\ University\ of\ Moratuwa/Documents/Anuki/Campus/Semester\ 5/EN3021\ Digital\ System\ Design/riscv_single_cycle_processor {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/counter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:26:43 on Oct 09,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor" C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controls.sv 
-# End time: 20:26:43 on Oct 09,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/anuki/OneDrive\ -\ University\ of\ Moratuwa/Documents/Anuki/Campus/Semester\ 5/EN3021\ Digital\ System\ Design/riscv_single_cycle_processor {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/pccalc.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:26:43 on Oct 09,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor" C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/pccalc.sv 
-# -- Compiling module pccalc
+# Start time: 15:02:19 on Oct 10,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor" C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/counter.sv 
+# -- Compiling module counter
 # 
 # Top level modules:
-# 	pccalc
-# End time: 20:26:43 on Oct 09,2023, Elapsed time: 0:00:00
+# 	counter
+# End time: 15:02:20 on Oct 10,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-vlog -reportprogress 300 -work work {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/pccalc_tb.sv}
+vlog -reportprogress 300 -work work {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:27:01 on Oct 09,2023
-# vlog -reportprogress 300 -work work C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/pccalc_tb.sv 
-# -- Compiling module pccalc_tb
+# Start time: 15:02:35 on Oct 10,2023
+# vlog -reportprogress 300 -work work C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv 
+# -- Compiling module counter_tb
 # 
 # Top level modules:
-# 	pccalc_tb
-# End time: 20:27:01 on Oct 09,2023, Elapsed time: 0:00:00
+# 	counter_tb
+# End time: 15:02:35 on Oct 10,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.pccalc_tb
-# vsim work.pccalc_tb 
-# Start time: 20:27:09 on Oct 09,2023
+vsim rtl_work.counter_tb
+# vsim rtl_work.counter_tb 
+# Start time: 15:02:41 on Oct 10,2023
 # Loading sv_std.std
-# Loading work.pccalc_tb
-# Loading work.pccalc
+# Loading rtl_work.counter_tb
+# Loading rtl_work.counter
 add wave -position insertpoint  \
-sim:/pccalc_tb/clk \
-sim:/pccalc_tb/rstn \
-sim:/pccalc_tb/offset \
-sim:/pccalc_tb/target_pc \
-sim:/pccalc_tb/branch_type \
-sim:/pccalc_tb/alu_zero \
-sim:/pccalc_tb/alu_neg \
-sim:/pccalc_tb/return_pc
+sim:/counter_tb/counter_N \
+sim:/counter_tb/clk \
+sim:/counter_tb/rstn \
+sim:/counter_tb/counter_en \
+sim:/counter_tb/counter_out \
+sim:/counter_tb/counter_done \
+sim:/counter_tb/counter_words
 run
-# End time: 20:29:38 on Oct 09,2023, Elapsed time: 0:02:29
+run
+vlog -reportprogress 300 -work work {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:07:02 on Oct 10,2023
+# vlog -reportprogress 300 -work work C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv 
+# -- Compiling module counter_tb
+# 
+# Top level modules:
+# 	counter_tb
+# End time: 15:07:02 on Oct 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading rtl_work.counter_tb
+run
+# ** Note: $finish    : C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv(28)
+#    Time: 156 ns  Iteration: 0  Instance: /counter_tb
+# 1
+# Break in Module counter_tb at C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv line 28
+vlog -reportprogress 300 -work work {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:08:10 on Oct 10,2023
+# vlog -reportprogress 300 -work work C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv 
+# -- Compiling module counter_tb
+# 
+# Top level modules:
+# 	counter_tb
+# End time: 15:08:10 on Oct 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading rtl_work.counter_tb
+run
+# ** Note: $finish    : C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv(28)
+#    Time: 166 ns  Iteration: 0  Instance: /counter_tb
+# 1
+# Break in Module counter_tb at C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv line 28
+vlog -reportprogress 300 -work work {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:09:08 on Oct 10,2023
+# vlog -reportprogress 300 -work work C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv 
+# -- Compiling module counter_tb
+# 
+# Top level modules:
+# 	counter_tb
+# End time: 15:09:09 on Oct 10,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# Loading rtl_work.counter_tb
+run
+# ** Note: $finish    : C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv(26)
+#    Time: 186 ns  Iteration: 0  Instance: /counter_tb
+# 1
+# Break in Module counter_tb at C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv line 26
+# End time: 09:44:34 on Oct 11,2023, Elapsed time: 18:41:53
 # Errors: 0, Warnings: 0

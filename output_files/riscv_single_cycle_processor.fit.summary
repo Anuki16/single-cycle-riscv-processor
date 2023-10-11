@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Oct 10 01:07:43 2023
+Fitter Status : Successful - Tue Oct 10 14:52:13 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : riscv_single_cycle_processor
-Top-level Entity Name : datapath
+Top-level Entity Name : counter
 Family : Cyclone IV E
 Device : EP4CE6E22C6
 Timing Models : Final
-Total logic elements : 0 / 6,272 ( 0 % )
-    Total combinational functions : 0 / 6,272 ( 0 % )
-    Dedicated logic registers : 0 / 6,272 ( 0 % )
-Total registers : 0
-Total pins : 51 / 92 ( 55 % )
+Total logic elements : 21 / 6,272 ( < 1 % )
+    Total combinational functions : 21 / 6,272 ( < 1 % )
+    Dedicated logic registers : 7 / 6,272 ( < 1 % )
+Total registers : 7
+Total pins : 43 / 92 ( 47 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )

@@ -35,7 +35,7 @@ module pccalc (
 						 (branch_type == `JMP_JALR) || 
 						 (branch_type == `JMP_BEQ && alu_zero) ||
 						 (branch_type == `JMP_BNE && (!alu_zero)) ||
-						 (branch_type == `JMP_BLT && (!alu_zero) ||
+						 (branch_type == `JMP_BLT && (!alu_zero)) ||
 						 (branch_type == `JMP_BGT && alu_zero); 	// using slt/sltu
 						 
 	assign return_pc = pc + 4;
