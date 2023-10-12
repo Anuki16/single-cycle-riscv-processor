@@ -4,27 +4,15 @@ module datapath #(
 	parameter REG_WIDTH = 32,
 	parameter REG_COUNT = 32,
 	parameter NUM_MEM_LOCS = 64,
+	parameter NUM_INST = 128,
 	parameter ALU_SEL_WIDTH = 4
 )(
-	/* control signals */
 	input logic clk, rstn,
-	input logic write_en,
-	
-	input logic [ALU_SEL_WIDTH-1:0] alu_sel,
-	input logic alu_a_sel, alu_b_sel,
-	
-	input logic mem_read, mem_write,
-	input logic [1:0] load_store_type,
-	input logic load_unsigned,
-	
-	input logic [1:0] write_src_sel,		// from where is written to register
-	
-	input logic [2:0] branch_type,
-	/* End of control signals */
-	
-	input logic [31:0] instruction
+	input logic [17:0] ctrl_signals,
+	output logic [31:0] instruction
 );
 
+	/* Datapath Wires */
 	localparam REG_BITS = $clog2(REG_COUNT);
 	logic [REG_BITS-1:0] read_reg1, read_reg2, write_reg;
 	logic signed [REG_WIDTH-1:0] read_data1, read_data2, write_data, imm_data;
@@ -34,6 +22,21 @@ module datapath #(
 	logic signed [REG_WIDTH-1:0] mem_write_data, mem_read_data;
 	logic [31:0] pc, target_pc, return_pc, pc_offset;
 	
+	/* control signals */
+	logic write_en;
+	logic [ALU_SEL_WIDTH-1:0] alu_sel;
+	logic alu_a_sel, alu_b_sel;
+	logic mem_read, mem_write;
+	logic [1:0] load_store_type;
+	logic load_unsigned;
+	logic [1:0] write_src_sel; 	// from where is written to register
+	logic [2:0] branch_type;
+	logic stay;		// Do not go to next instruction
+	
+	/* Control signal assignments */
+	assign {write_en, alu_sel, alu_b_sel, alu_a_sel, mem_write, mem_read, load_store_type, load_unsigned, write_src_sel, branch_type, stay} = ctrl_signals;
+	
+	/* Assignments in datapath */
 	assign read_reg1 = instruction[19:15];
 	assign read_reg2 = instruction[24:20];
 	assign write_reg = instruction[11:7];
@@ -71,5 +74,7 @@ module datapath #(
 			.sel(write_src_sel),
 			.out(write_data)
 	);
+	
+	inst_memory #(.NUM_INST(NUM_INST)) instmem_obj (.*);
 
 endmodule

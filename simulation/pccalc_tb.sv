@@ -9,6 +9,7 @@ module pccalc_tb();
 	logic [31:0] target_pc, pc;
 	logic [2:0] branch_type;
 	logic alu_zero = 0, alu_neg = 0;
+	logic stay = 0;
 	logic [31:0] return_pc;
 	
 	always #5 clk <= ~clk;
