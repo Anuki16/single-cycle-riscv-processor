@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscv_single_cycle_processor
-Thu Oct 12 15:30:24 2023
+Sun Oct 15 02:47:10 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 12 15:30:24 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 15 02:47:10 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; riscv_single_cycle_processor                ;
 ; Top-level Entity Name              ; riscv_single_cycle_processor                ;
@@ -356,7 +356,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 12 15:30:16 2023
+    Info: Processing started: Sun Oct 15 02:47:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscv_single_cycle_processor -c riscv_single_cycle_processor
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
@@ -396,6 +396,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file simulat
     Info (12023): Found entity 1: counter_tb File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file riscv_single_cycle_processor.sv
     Info (12023): Found entity 1: riscv_single_cycle_processor File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/riscv_single_cycle_processor.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file simulation/top_tb.sv
+    Info (12023): Found entity 1: top_tb File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/top_tb.sv Line: 5
 Info (12127): Elaborating entity "riscv_single_cycle_processor" for the top level hierarchy
 Info (12128): Elaborating entity "controller" for hierarchy "controller:ctrl_obj" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/riscv_single_cycle_processor.sv Line: 14
 Warning (10030): Net "control_store[511][0..17]" at controller.sv(12) has no driver or initial value, using a default initial value '0' File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controller.sv Line: 12
@@ -874,7 +876,7 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (12128): Elaborating entity "pccalc" for hierarchy "datapath:data_obj|pccalc:pclogic_obj" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 68
 Info (12128): Elaborating entity "mux3" for hierarchy "datapath:data_obj|mux3:reg_src_mux" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 76
 Info (12128): Elaborating entity "inst_memory" for hierarchy "datapath:data_obj|inst_memory:instmem_obj" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv Line: 78
-Warning (10858): Verilog HDL warning at inst_memory.sv(8): object memory used but never assigned File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/inst_memory.sv Line: 8
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "memory" into its bus
 Info (144001): Generated suppressed messages file C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/output_files/riscv_single_cycle_processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -884,11 +886,11 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 471 warnings
-    Info: Peak virtual memory: 4736 megabytes
-    Info: Processing ended: Thu Oct 12 15:30:24 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 470 warnings
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Sun Oct 15 02:47:11 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+

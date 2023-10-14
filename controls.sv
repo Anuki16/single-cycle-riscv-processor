@@ -14,6 +14,7 @@
 `define ALU_SLTU 'b1001
 `define ALU_A   'b1010
 `define ALU_B   'b1011
+`define ALU_MUL 'b1100
 
 // Opcode types
 `define TYPE_R 	  7'b0110011
@@ -25,6 +26,7 @@
 `define TYPE_U_LUI  7'b0110111
 `define TYPE_U_AUIPC 7'b0010111
 `define TYPE_UJ	  7'b1101111
+`define TYPE_MEMCPY 7'b0001011
 
 // Load and store types
 `define LS_BYTE	2'b00

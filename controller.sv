@@ -1,7 +1,7 @@
 `include "controls.sv"
 
 module controller (
-	input logic clk, rstn,
+	input logic clk, rstn, ext,	// External signal for not jumping
 	input logic [31:0] instruction,
 	output logic [17:0] ctrl_signals
 );
@@ -117,3 +117,7 @@ module controller (
 	
 	
 endmodule
+
+
+// problems: while counter_done control logic go wrong when imm has some other value?
+

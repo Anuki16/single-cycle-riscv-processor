@@ -1,5 +1,5 @@
 Flow report for riscv_single_cycle_processor
-Thu Oct 12 15:30:34 2023
+Sun Oct 15 02:47:26 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 12 15:30:34 2023       ;
+; Flow Status                        ; Successful - Sun Oct 15 02:47:26 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; riscv_single_cycle_processor                ;
 ; Top-level Entity Name              ; riscv_single_cycle_processor                ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+------------------------------+
 ; Option            ; Setting                      ;
 +-------------------+------------------------------+
-; Start date & time ; 10/12/2023 15:30:16          ;
+; Start date & time ; 10/15/2023 02:47:01          ;
 ; Main task         ; Compilation                  ;
 ; Revision Name     ; riscv_single_cycle_processor ;
 +-------------------+------------------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 104084338567000.169710481625672        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 104084338567000.169731822114000        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
 ; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --          ; --             ;
@@ -94,12 +94,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4726 MB             ; 00:00:19                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 5481 MB             ; 00:00:04                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 4677 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4767 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4729 MB             ; 00:00:20                           ;
+; Fitter               ; 00:00:07     ; 1.0                     ; 5478 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4677 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4765 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4638 MB             ; 00:00:01                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:26                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

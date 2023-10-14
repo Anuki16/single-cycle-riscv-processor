@@ -9,54 +9,288 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/modelsim
-vcounter
+valu
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1696930340
+Z2 !s110 1697318274
 !i10b 1
-!s100 FdSZXURhRJ2TkKWcP738A2
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IK5H6U7KFW?913Wh;Ei8=>1
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s100 ITihz>cT0j6c<d7kQlYTd0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IejmOELoWE52Xk8AKlZT?33
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1696930256
-8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/counter.sv
-FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/counter.sv
-!i122 0
-L0 2 30
-Z4 OV;L;2020.1;71
+w1696874859
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/alu.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/alu.sv
+!i122 3
+L0 3 32
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1696930339.000000
-!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/counter.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/counter.sv|
+Z6 !s108 1697318273.000000
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controls.sv|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/alu.sv|
 !i113 1
-o-sv -work work
-!s92 -sv -work work {+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor}
-Z5 tCvgOpt 0
-vcounter_tb
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor}
+Z9 tCvgOpt 0
+vcontroller
 R1
-!s110 1696930749
-!i10b 1
-!s100 ?lWV9F:UzB?U2OM6G_g?82
 R2
-I0nSh`4hL=J8WB];Ng7@6m0
+!i10b 1
+!s100 PFXch]8>RSc3MQd[[Zd:M0
 R3
+IhS_[R8Q9bAl`WA?Z@VGk?2
+R4
 S1
 R0
-w1696930738
-8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv
-FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv
-!i122 4
-L0 3 33
-R4
+w1697104673
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controller.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controller.sv
+!i122 7
+L0 3 117
+R5
 r1
 !s85 0
 31
-!s108 1696930748.000000
-!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv|
+Z10 !s108 1697318274.000000
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controls.sv|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controller.sv|
+!i113 1
+R7
+R8
+R9
+vdata_memory
+R1
+R2
+!i10b 1
+!s100 Yz^Df@ZjGm6BanCcSe9]60
+R3
+I9N^FTff[EFiJ6z2225:Kj3
+R4
+S1
+R0
+w1696864103
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/data_memory.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/data_memory.sv
+!i122 5
+L0 3 54
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controls.sv|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/data_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/data_memory.sv|
+!i113 1
+R7
+R8
+R9
+vdatapath
+R1
+R2
+!i10b 1
+!s100 Xh8OG^K71KK=E;SmiX9`F3
+R3
+I>eoQZjFz[oeTBhH]k56Vl3
+R4
+S1
+R0
+w1697104814
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv
+!i122 8
+L0 3 78
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controls.sv|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/datapath.sv|
+!i113 1
+R7
+R8
+R9
+vimmgen
+R1
+R2
+!i10b 1
+!s100 OMFJ5Q5[WlI[`7fnch;Ng3
+R3
+I1zF;STg0K:kIT2D0aNWHG2
+R4
+S1
+R0
+w1696921199
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/immgen.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/immgen.sv
+!i122 4
+L0 3 37
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controls.sv|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/immgen.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/immgen.sv|
+!i113 1
+R7
+R8
+R9
+vinst_memory
+R1
+Z11 !s110 1697318273
+!i10b 1
+!s100 YVjRFm1IOVi?H`=CMj>z43
+R3
+Icg7j>ZEDnA6h:3[F:8XNl2
+R4
+S1
+R0
+w1697318219
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/inst_memory.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/inst_memory.sv
+!i122 2
+Z12 L0 2 21
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/inst_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/inst_memory.sv|
+!i113 1
+R7
+R8
+R9
+vmux3
+R1
+R11
+!i10b 1
+!s100 0L5E<ogU?m2JETDW`I<7g0
+R3
+IzJNT]B^NWJUS;li@DUB>o2
+R4
+S1
+R0
+w1696866956
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/mux3.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/mux3.sv
+!i122 1
+L0 1 17
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/mux3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/mux3.sv|
+!i113 1
+R7
+R8
+R9
+vpccalc
+R1
+R2
+!i10b 1
+!s100 B1bBUQ]ODMm0Ie=Qe^_g42
+R3
+ICPjj;MoZGVVifoQf8NQY?0
+R4
+S1
+R0
+w1697103717
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/pccalc.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/pccalc.sv
+!i122 6
+L0 3 44
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/controls.sv|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/pccalc.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/pccalc.sv|
+!i113 1
+R7
+R8
+R9
+vregfile
+R1
+R11
+!i10b 1
+!s100 I2U0e>jnIf4fgGQdM?b6^1
+R3
+Ig62bS[d:EPaP=nSfcWNn42
+R4
+S1
+R0
+w1695135038
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/regfile.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/regfile.sv
+!i122 0
+L0 2 26
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/regfile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/regfile.sv|
+!i113 1
+R7
+R8
+R9
+vriscv_single_cycle_processor
+R1
+R2
+!i10b 1
+!s100 J>O^L:bTFUJEGZeF3@^1h0
+R3
+I^iZf[M7lB8SKYWT>@i9L:2
+R4
+S1
+R0
+w1697104543
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/riscv_single_cycle_processor.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/riscv_single_cycle_processor.sv
+!i122 9
+R12
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/riscv_single_cycle_processor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/riscv_single_cycle_processor.sv|
+!i113 1
+R7
+R8
+R9
+vtop_tb
+R1
+!s110 1697318284
+!i10b 1
+!s100 LmMAY`fk5B0B[G4OC3oBE0
+R3
+Im5eU8Tihjed0]B2AXJSRd3
+R4
+S1
+R0
+w1697276116
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/top_tb.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/top_tb.sv
+!i122 10
+L0 5 24
+R5
+r1
+!s85 0
+31
+!s108 1697318284.000000
+!s107 C:\Users\anuki\OneDrive - University of Moratuwa\Documents\Anuki\Campus\Semester 5\EN3021 Digital System Design\riscv_single_cycle_processor\simulation\..\controls.sv|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/top_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/top_tb.sv|
 !i113 1
 o-work work
-R5
+R9

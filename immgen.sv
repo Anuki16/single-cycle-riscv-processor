@@ -32,6 +32,9 @@ module immgen (
 		else if (opcode == `TYPE_UJ)
 			imm_out = {{12{inst[31]}}, inst[19:12], inst[20], inst[30:25], inst[24:21], 1'b0};
 			
+		else if (opcode == `TYPE_MEMCPY)
+			imm_out = {25'b0, inst[31:25]};
+			
 		else
 			imm_out = 32'b0;
 	end 

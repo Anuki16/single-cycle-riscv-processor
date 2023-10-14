@@ -1,0 +1,10 @@
+`include "../controls.sv"
+
+`timescale 1ns/1ps
+
+module top_tb();
+
+	logic clk = 0, rstn = 1;
+	always #5 clk <= ~clk;
+	
+endmodule

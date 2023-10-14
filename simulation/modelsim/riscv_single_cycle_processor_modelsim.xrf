@@ -18,6 +18,7 @@ source_file = 1, C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuk
 source_file = 1, C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/counter.sv
 source_file = 1, C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/counter_tb.sv
 source_file = 1, C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/riscv_single_cycle_processor.sv
+source_file = 1, C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/simulation/top_tb.sv
 source_file = 1, C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 5/EN3021 Digital System Design/riscv_single_cycle_processor/db/riscv_single_cycle_processor.cbx.xml
 design_name = riscv_single_cycle_processor
 instance = comp, \clk~input , clk~input, riscv_single_cycle_processor, 1
