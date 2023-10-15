@@ -1,15 +1,17 @@
 `include "controls.sv"
 
-module datapath #(
+module datapath_mem #(
 	parameter REG_WIDTH = 32,
 	parameter REG_COUNT = 32,
 	parameter NUM_MEM_LOCS = 64,
 	parameter NUM_INST = 128,
-	parameter ALU_SEL_WIDTH = 4
+	parameter ALU_SEL_WIDTH = 4,
+	parameter CTRL_SIZE = 21
 )(
 	input logic clk, rstn,
-	input logic [17:0] ctrl_signals,
-	output logic [31:0] instruction
+	input logic [CTRL_SIZE-1:0] ctrl_signals,
+	output logic [31:0] instruction,
+	output logic ex_no_stay
 );
 
 	localparam N_WIDTH = 7;
@@ -24,7 +26,7 @@ module datapath #(
 	logic signed [REG_WIDTH-1:0] mem_write_data, mem_read_data;
 	logic [31:0] pc, target_pc, return_pc, pc_offset;
 	logic [REG_BITS-1:0] rs1, rs2, rd;
-   logic [WIDTH-1:0] counter_N;
+   logic [N_WIDTH-1:0] counter_N;
 	logic counter_words, counter_done;
 	logic [31:0] counter_out;
 	
@@ -33,16 +35,23 @@ module datapath #(
 	logic [ALU_SEL_WIDTH-1:0] alu_sel;
 	logic alu_a_sel, alu_b_sel;
 	logic mem_read, mem_write;
-	logic [1:0] load_store_type;
+	logic [1:0] load_store_type, ls_temp;
 	logic load_unsigned;
 	logic [1:0] write_src_sel; 	// from where is written to register
 	logic [2:0] branch_type;
-	logic stay;		// Do not go to next instruction
+	logic stay, stay_temp;		// Do not go to next instruction
 	logic memcpy_store;	// Load or store instruction within memcopy
 	logic counter_en, counter_sel;
 	
 	/* Control signal assignments */
-	assign {write_en, alu_sel, alu_b_sel, alu_a_sel, mem_write, mem_read, load_store_type, load_unsigned, write_src_sel, branch_type, stay} = ctrl_signals;
+	assign {write_en, alu_sel, alu_b_sel, alu_a_sel, mem_write, mem_read, ls_temp, load_unsigned, write_src_sel, branch_type, stay_temp, memcpy_store, counter_en, counter_sel} = ctrl_signals;
+	assign stay = stay_temp & (~ex_no_stay);
+	always_comb begin
+		if (!counter_sel) load_store_type = ls_temp;
+		else if (counter_words) load_store_type = `LS_WORD;
+		else load_store_type = `LS_BYTE;
+	end
+	
 	
 	/* Assignments in datapath */
 	assign rs1 = instruction[19:15];
@@ -64,6 +73,7 @@ module datapath #(
 	
 	assign counter_N = imm_data[N_WIDTH-1:0];
 	assign imm_sel_data = counter_sel? counter_out : imm_data;
+	assign ex_no_stay = counter_done & counter_en;	// Only check this on a memcopy instruction
 	
 	
 	regfile #(.WIDTH(REG_WIDTH),
