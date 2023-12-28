@@ -11,7 +11,8 @@ module datapath_mem #(
 	input logic clk, rstn,
 	input logic [CTRL_SIZE-1:0] ctrl_signals,
 	output logic [31:0] instruction,
-	output logic ex_no_stay
+	output logic ex_no_stay,
+	output logic [REG_WIDTH-1:0] x5, x6, mem1
 );
 
 	localparam N_WIDTH = 7;

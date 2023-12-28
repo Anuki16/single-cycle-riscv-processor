@@ -7,7 +7,8 @@ module riscv_single_cycle_processor #(
 	parameter ALU_SEL_WIDTH = 4,
 	parameter CTRL_SIZE = 21
 )( 
-	input logic clk, rstn
+	input logic clk, rstn,
+	output logic [REG_WIDTH-1:0] x5, x6, mem1
 );	
 	logic [31:0] instruction;
 	logic [CTRL_SIZE-1:0] ctrl_signals;

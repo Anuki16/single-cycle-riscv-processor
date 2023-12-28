@@ -1,1 +1,5 @@
 v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,riscv_single_cycle_processor:proc|datapath_mem:data_obj|alu:alu_obj|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,riscv_single_cycle_processor:proc|datapath_mem:data_obj|alu:alu_obj|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,riscv_single_cycle_processor:proc|datapath_mem:data_obj|alu:alu_obj|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out6,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,riscv_single_cycle_processor:proc|datapath_mem:data_obj|alu:alu_obj|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult5,

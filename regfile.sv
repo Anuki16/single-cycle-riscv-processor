@@ -8,7 +8,8 @@ module regfile #(
 	input logic signed [WIDTH-1:0] write_data,
 	input logic write_en,
 	input logic clk, rstn,
-	output logic signed [WIDTH-1:0] read_data1, read_data2
+	output logic signed [WIDTH-1:0] read_data1, read_data2,
+	output logic [WIDTH-1:0] x5, x6	// Debug outputs for FPGA
 );
 	logic [WIDTH-1:0] registers [REG_COUNT-1:0];		// unpacked array of 32 bit packed values
 	
@@ -23,5 +24,8 @@ module regfile #(
 		else if (write_en && write_reg) // Don't write if the write reg address is 0, this will keep it hardwired to 0
 			registers[write_reg] <= write_data;
 	end
+	
+	assign x5 = registers[5];
+	assign x6 = registers[6];
 
 endmodule

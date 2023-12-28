@@ -11,7 +11,8 @@ module data_memory #(
 	input logic mem_read, mem_write,	// control signals
 	input logic [1:0] load_store_type, 
 	input logic load_unsigned,
-	output logic signed [DATA_WIDTH-1:0] mem_read_data
+	output logic signed [DATA_WIDTH-1:0] mem_read_data,
+	output logic [31:0] mem1
 );
 	
 	// Memory: NUM_LOCS locations with 4 bytes each
@@ -51,6 +52,8 @@ module data_memory #(
 			end
 		end 
 	end
+	
+	assign mem1 = memory[16];	// FPGA output check: this is memory address 64
 	
 
 endmodule

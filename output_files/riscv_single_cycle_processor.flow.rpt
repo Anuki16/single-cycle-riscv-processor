@@ -1,5 +1,5 @@
 Flow report for riscv_single_cycle_processor
-Sun Oct 15 23:31:04 2023
+Sat Dec 02 04:03:51 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Oct 15 23:31:03 2023       ;
+; Flow Status                        ; Successful - Sat Dec 02 04:03:51 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; riscv_single_cycle_processor                ;
-; Top-level Entity Name              ; riscv_single_cycle_processor                ;
+; Top-level Entity Name              ; processor_fpga                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0 / 6,272 ( 0 % )                           ;
-;     Total combinational functions  ; 0 / 6,272 ( 0 % )                           ;
-;     Dedicated logic registers      ; 0 / 6,272 ( 0 % )                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 2 / 92 ( 2 % )                              ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
-; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
-; Device                             ; EP4CE6E22C6                                 ;
+; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 13,581 / 114,480 ( 12 % )                   ;
+;     Total combinational functions  ; 13,451 / 114,480 ( 12 % )                   ;
+;     Dedicated logic registers      ; 2,576 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 2576                                        ;
+; Total pins                         ; 51 / 529 ( 10 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,536 / 3,981,312 ( < 1 % )                 ;
+; Embedded Multiplier 9-bit elements ; 6 / 532 ( 1 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,28 +65,31 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+------------------------------+
 ; Option            ; Setting                      ;
 +-------------------+------------------------------+
-; Start date & time ; 10/15/2023 23:30:44          ;
+; Start date & time ; 12/02/2023 03:47:16          ;
 ; Main task         ; Compilation                  ;
 ; Revision Name     ; riscv_single_cycle_processor ;
 +-------------------+------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 104084338567000.169739284413564        ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
-; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                     ; Verilog_2001  ; --          ; --             ;
-; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                    ; --            ; --          ; --             ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                              ;
++-------------------------------------+----------------------------------------+------------------------------+----------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value                ; Entity Name    ; Section Id     ;
++-------------------------------------+----------------------------------------+------------------------------+----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 104084338567000.170146903632292        ; --                           ; --             ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --                           ; --             ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>                       ; --             ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                           ; --             ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                           ; --             ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; All                                    ; --                           ; --             ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                           ; processor_fpga ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                           ; processor_fpga ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                           ; processor_fpga ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                           ; --             ; --             ;
+; TOP_LEVEL_ENTITY                    ; processor_fpga                         ; riscv_single_cycle_processor ; --             ; --             ;
+; VERILOG_INPUT_VERSION               ; SystemVerilog_2005                     ; Verilog_2001                 ; --             ; --             ;
+; VERILOG_SHOW_LMF_MAPPING_MESSAGES   ; Off                                    ; --                           ; --             ; --             ;
++-------------------------------------+----------------------------------------+------------------------------+----------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -94,12 +97,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4729 MB             ; 00:00:19                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 5478 MB             ; 00:00:03                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 4677 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4765 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4636 MB             ; 00:00:01                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:25                           ;
+; Analysis & Synthesis ; 00:02:11     ; 1.0                     ; 4869 MB             ; 00:02:26                           ;
+; Fitter               ; 00:13:45     ; 1.0                     ; 5857 MB             ; 00:11:13                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4727 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:10     ; 2.1                     ; 5092 MB             ; 00:00:15                           ;
+; EDA Netlist Writer   ; 00:00:16     ; 1.0                     ; 4763 MB             ; 00:00:15                           ;
+; Total                ; 00:16:26     ; --                      ; --                  ; 00:14:13                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

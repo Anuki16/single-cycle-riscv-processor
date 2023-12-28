@@ -1,0 +1,34 @@
+
+module processor_fpga #(
+	parameter REG_WIDTH = 32,
+	parameter REG_COUNT = 32,
+	parameter NUM_MEM_LOCS = 64,
+	parameter NUM_INST = 128,
+	parameter ALU_SEL_WIDTH = 4,
+	parameter CTRL_SIZE = 21
+)( 
+	input logic clk, rstn,
+	output logic [1:0][6:0] out1, out2	// 7 segment outputs
+);	
+	
+	riscv_single_cycle_processor #(.REG_WIDTH(REG_WIDTH), 
+				  .REG_COUNT(REG_COUNT),
+				  .NUM_MEM_LOCS(NUM_MEM_LOCS),
+				  .NUM_INST(NUM_INST),
+				  .ALU_SEL_WIDTH(ALU_SEL_WIDTH),
+				  .CTRL_SIZE(CTRL_SIZE)) proc (.*);
+				  
+	/* 7 segment outputs */
+	logic [3:0] one1, one2, ten1, ten2; // single digits
+
+   assign one1 = x5 % 10;
+   assign ten1 = (x5 / 10) % 10;
+   assign one2 = x6 % 10;
+   assign ten2 = (x6 / 10) % 10;
+	
+	binary_to_7seg ss1 (.data_in(one1), .data_out(out1[0]));
+	binary_to_7seg ss2 (.data_in(ten1), .data_out(out1[1]));
+	binary_to_7seg ss3 (.data_in(one2), .data_out(out2[0]));
+	binary_to_7seg ss4 (.data_in(ten2), .data_out(out2[1]));
+	
+endmodule
